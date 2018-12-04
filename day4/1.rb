@@ -37,5 +37,5 @@ events.each do |e|
 end
 
 guards.each do |k,v|
-	puts 'guard: ' + k + ' total minutes slept: ' + v.inject(0){|sum,x| sum + x }.to_s + ' sleepiest minute: ' + v.rindex(v.max).to_s + ' minutes slept: ' + v.max.to_s
+	puts 'guard: ' + k + ' total minutes slept: ' + v.inject(0){|sum,x| sum + x }.to_s + ' sleepiest minute: ' + v.rindex(v.max).to_s + ' minutes slept during sleepiest minute: ' + v.max.to_s
 end
