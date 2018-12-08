@@ -1,5 +1,3 @@
-# 1 1 0 1 99 2 1 1 2
-# 0 1 99 2 1 1 2
 def num_elements_to_shift(input_array)
 	i2 = Marshal.load(Marshal.dump(input_array))
 	num_children = i2[0]
