@@ -14,6 +14,7 @@ min_x = coordinates.max {|a,b| b[0] <=> a[0] }[0]
 max_y = coordinates.max {|a,b| a[1] <=> b[1] }[1]
 min_y = coordinates.max {|a,b| b[1] <=> a[1] }[1]
 
+# creating a grid with a 1 pixel border. anything that is tied there will be tied for infinity.
 closest_coordinates = Array.new(max_x+2){Array.new(max_y+2)}
 coordinates_with_infinate_areas = Hash.new
 0.upto(max_x + 1) do |x|
