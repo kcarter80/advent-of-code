@@ -2,8 +2,7 @@ input = 'CcvVeGgRbBxCcXbJtTjBrMmmaASgGceECGgARrjmMJDPpFmMjJSsfMlLmUYyDNnduGgFfwK
 
 letter_results = {}
 ('a'..'z').to_a.each do |letter|
-	input_char_array = input.split("")
-	input_char_array.reject! {|x| x.downcase == letter}
+	input_char_array = input.split("").reject! {|x| x.downcase == letter}
 	i = 0
 	while i < input_char_array.length - 1
 		if (input_char_array[i] != input_char_array[i+1]) and (input_char_array[i].downcase == input_char_array[i+1].downcase)
@@ -18,7 +17,5 @@ letter_results = {}
 	end
 	letter_results[letter] = input_char_array.length
 end
-
-puts letter_results
 
 puts letter_results.sort_by { |key, value| value }.first
